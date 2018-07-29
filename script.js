@@ -2,7 +2,7 @@ GuessingGameQuestions = () => {
 
     let username = prompt('What is your name?');
     alert(`Hello ${username}! welcome to the guessing game!`);
-    
+
     let node = document.getElementById('header');
     let newNode = document.createElement('h2');
     newNode.appendChild(document.createTextNode(`Welcome ${username}`));
@@ -12,24 +12,24 @@ GuessingGameQuestions = () => {
 startQuiz = () => {
     let correctCounter = 0;
 
-  let firstQuestion = prompt("Was I born in Portland, Oregon, Yes or No?");
-  console.log(`first Question answer is ${firstQuestion}`);
+    let firstQuestion = prompt("Was I born in Portland, Oregon, Yes or No?");
+    console.log(`first Question answer is ${firstQuestion}`);
     if (firstQuestion == "Yes" || firstQuestion == "yes" || firstQuestion == "y" || firstQuestion == "True" || firstQuestion == "true") {
-      alert("Correct, I was born in Portland!")
-      let question1Answer = document.getElementById('question-answers');
-      let newNode = document.createElement('li');
-      newNode.appendChild(document.createTextNode('correct'));
-      question1Answer.appendChild(newNode);
+        alert("Correct, I was born in Portland!")
+        let question1Answer = document.getElementById('question-answers');
+        let newNode = document.createElement('li');
+        newNode.appendChild(document.createTextNode('correct'));
+        question1Answer.appendChild(newNode);
 
-      correctCounter++;
-  }
-  else {
-      alert("I do live in Portland");
-      let question1Answer = document.getElementById("question-answers");
-      let newNode = document.createElement('li');
-      newNode.appendChild(document.createTextNode('Question 1 incorrect'));
-      question1Answer.appendChild(newNode);
-  }
+        correctCounter++;
+    }
+    else {
+        alert("I do live in Portland");
+        let question1Answer = document.getElementById("question-answers");
+        let newNode = document.createElement('li');
+        newNode.appendChild(document.createTextNode('Question 1 incorrect'));
+        question1Answer.appendChild(newNode);
+    }
 
     let secondQuestion = prompt("I have one dog and two cats");
     console.log(`second Question answer is ${secondQuestion}`);
@@ -90,7 +90,7 @@ startQuiz = () => {
 
     let fifthQuestion = prompt("What number between 1 and 10 I thinking of at the moment of writing this question?");
     console.log(`fifth question answer is ${fifthQuestion}`);
-    if(fifthQuestion < 6) {
+    if (fifthQuestion < 6) {
         alert('Alittle higher')
         let question5Answer = document.getElementById('question-answers');
         let newNode = document.createElement('li');
@@ -110,8 +110,27 @@ startQuiz = () => {
         newNode.appendChild(document.createTextNode('correct'));
         question5Answer.appendChild(newNode);
 
-        correctCounter ++
+        correctCounter++
     }
+
+    let sixthQuestion = 0;
+
+    while (sixthQuestion !== 1) {
+        sixthQuestion = prompt('What is my astrological sign? Pisces, Tauros, Scorpio, or Libra?').toUpperCase();
+        if (sixthQuestion === 'SCORPIO') {
+            sixthQuestion = 1;
+            console.log(`sixth Question answer is ${sixthQuestion}`);
+            let question6Answer = document.getElementById('question-answers');
+            let newNode = document.createElement('li');
+            newNode.appendChild(document.createTextNode('correct'));
+            question6Answer.appendChild(newNode);
+            correctCounter++;
+
+        } else {
+            alert("Nope, I'll give you a hint, I'm a water sign");
+        }
+    }
+
     console.log("correct answers " + correctCounter);
     let counter = document.getElementById('question-answers');
     let newNode = document.createElement('p');
