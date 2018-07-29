@@ -121,8 +121,7 @@ startQuiz = () => {
 };
 
 resetQuiz = () => {
-    let node = document.getElementById('question-answers');
-    node.remove();
+    let node = document.getElementById('question-answers').innerHTML = "";
 
     let correctCounter = 0;
 }
