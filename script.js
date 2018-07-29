@@ -119,6 +119,7 @@ startQuiz = () => {
         sixthQuestion = prompt('What is my astrological sign? Pisces, Tauros, Scorpio, or Libra?').toUpperCase();
         if (sixthQuestion === 'SCORPIO') {
             sixthQuestion = 1;
+            console.log(`sixth Question answer is ${sixthQuestion}`);
             let question6Answer = document.getElementById('question-answers');
             let newNode = document.createElement('li');
             newNode.appendChild(document.createTextNode('correct'));
