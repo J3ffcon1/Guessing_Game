@@ -113,6 +113,10 @@ startQuiz = () => {
         correctCounter ++
     }
     console.log("correct answers " + correctCounter);
+    let counter = document.getElementById('question-answers');
+    let newNode = document.createElement('p');
+    newNode.appendChild(document.createTextNode(`You got ${correctCounter} questions correct!`));
+    counter.appendChild(newNode);
 
 };
 
