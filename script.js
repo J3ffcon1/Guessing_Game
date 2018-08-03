@@ -9,6 +9,7 @@ GuessingGameQuestions = () => {
     node.appendChild(newNode);
 };
 
+
 startQuiz = () => {
     let correctCounter = 0;
 
